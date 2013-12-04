@@ -3,7 +3,7 @@ import re
 
 def find_in_xml(xml_string):
     #make it work :O
-    list = re.findall('\s(?!src|.*<.*\s)(?P<key>.+?)="(?P<value>.+?)".+?\n?', xml_string)
+    list = re.findall('.+\s(?!src|.*<.*\s)(?P<key>.+?)="(?P<value>.+?)".+?\n?', xml_string)
     for element in list:
         yield element
 
